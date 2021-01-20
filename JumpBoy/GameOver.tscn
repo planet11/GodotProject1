@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/fonts/OCRAEXT.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://GO_mainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Assets/sounds/Voices From Heaven.ogg" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.0941176, 0.0588235, 0.0588235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 1191.0
+margin_bottom = 490.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Game OVER!!
+:'(
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GO_mainMenu" type="Button" parent="ColorRect"]
+margin_left = 344.0
+margin_top = 296.0
+margin_right = 626.0
+margin_bottom = 486.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.835294, 0.823529, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.0352941, 0.862745, 0.0509804, 1 )
+text = "Main Menu"
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicGameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -2.0
+autoplay = true
+[connection signal="pressed" from="ColorRect/GO_mainMenu" to="ColorRect/GO_mainMenu" method="_on_GO_mainMenu_pressed"]

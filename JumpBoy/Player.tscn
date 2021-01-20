@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://player_spriteframes.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/sounds/confirmation_001.ogg" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.19763
+height = 45.8513
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 128, 320 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( -29.5878, 29.5874 )
+scale = Vector2( 0.296986, 0.296986 )
+frames = ExtResource( 1 )
+animation = "idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -32, 32 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 34.7963, 0.561279 )
+stream = ExtResource( 4 )
+volume_db = -12.0
+pitch_scale = 2.0
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

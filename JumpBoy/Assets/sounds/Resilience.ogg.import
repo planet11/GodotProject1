@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Resilience.ogg-3b9f2bb6f43e70b686ec1f1374a658fe.oggstr"
+
+[deps]
+
+source_file="res://Assets/sounds/Resilience.ogg"
+dest_files=[ "res://.import/Resilience.ogg-3b9f2bb6f43e70b686ec1f1374a658fe.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
