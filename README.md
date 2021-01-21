@@ -1,5 +1,5 @@
 # GodotProject1
-Jump boy game, PC and android
+Jump boy game for PC and android.
 This is the finished game JumpBoy.
 I made this game using gdscript in the 'Godot' game engine.
 
