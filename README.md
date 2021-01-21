@@ -9,6 +9,3 @@ All the other assets used were from https://www.kenney.nl/ and they were free to
 All the music used were free music and I do not intend to sell this game and profit from it.
 This project is just a beginner practice project made with the intention of learning.
 
-To play the game, run JumpBoyV3
-
-Enjoy the game!!
